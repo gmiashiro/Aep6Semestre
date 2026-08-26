@@ -1,0 +1,8 @@
+spring:
+  data:
+    mongodb:
+      uri: ${SPRING_DATA_MONGODB_URI:mongodb://root:Mongo@localhost:27018/linguagens?authSource=admin}
+
+springdoc:
+  swagger-ui:
+    path: /docs

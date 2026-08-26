@@ -1,0 +1,19 @@
+services:
+  mongo:
+    image: mongo:${MONGO_VERSION:-7.0}
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
+    ports:
+      - "127.0.0.1:${MONGO_PORT:-27018}:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  mongo-express:
+    depends_on:
+      mongo:
+        condition: service_healthy
+
+volumes:
+  mongo-data:
+    name: ${MONGO_DATA_VOLUME:-aepmongojava2026_mongo-data}
