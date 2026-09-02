@@ -62,4 +62,108 @@ public class PlantaModel {
         this.periodoFloracao = periodoFloracao;
         this.corDasFlores = new ArrayList<>(corDasFlores);
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getNomeCientifico() {
+        return nomeCientifico;
+    }
+
+    public void setNomeCientifico(String nomeCientifico) {
+        this.nomeCientifico = nomeCientifico;
+    }
+
+    public List<String> getNomesPopulares() {
+        return nomesPopulares;
+    }
+
+    public void setNomesPopulares(List<String> nomesPopulares) {
+        this.nomesPopulares = nomesPopulares;
+    }
+
+    public EstadoConservacao getEstadoConservacao() {
+        return estadoConservacao;
+    }
+
+    public void setEstadoConservacao(EstadoConservacao estadoConservacao) {
+        this.estadoConservacao = estadoConservacao;
+    }
+
+    public Boolean getVenenosa() {
+        return venenosa;
+    }
+
+    public void setVenenosa(Boolean venenosa) {
+        this.venenosa = venenosa;
+    }
+
+    public Boolean getSeguraConsumoHumano() {
+        return seguraConsumoHumano;
+    }
+
+    public void setSeguraConsumoHumano(Boolean seguraConsumoHumano) {
+        this.seguraConsumoHumano = seguraConsumoHumano;
+    }
+
+    public double getAlturaAproximada() {
+        return alturaAproximada;
+    }
+
+    public void setAlturaAproximada(double alturaAproximada) {
+        this.alturaAproximada = alturaAproximada;
+    }
+
+    public String getPorte() {
+        return porte;
+    }
+
+    public void setPorte(String porte) {
+        this.porte = porte;
+    }
+
+    public int getLongevidade() {
+        return longevidade;
+    }
+
+    public void setLongevidade(int longevidade) {
+        this.longevidade = longevidade;
+    }
+
+    public String getTipoSolo() {
+        return tipoSolo;
+    }
+
+    public void setTipoSolo(String tipoSolo) {
+        this.tipoSolo = tipoSolo;
+    }
+
+    public Luminosidade getLuminosidade() {
+        return luminosidade;
+    }
+
+    public void setLuminosidade(Luminosidade luminosidade) {
+        this.luminosidade = luminosidade;
+    }
+
+    public String getPeriodoFloracao() {
+        return periodoFloracao;
+    }
+
+    public void setPeriodoFloracao(String periodoFloracao) {
+        this.periodoFloracao = periodoFloracao;
+    }
+
+    public List<String> getCorDasFlores() {
+        return corDasFlores;
+    }
+
+    public void setCorDasFlores(List<String> corDasFlores) {
+        this.corDasFlores = corDasFlores;
+    }
 }
