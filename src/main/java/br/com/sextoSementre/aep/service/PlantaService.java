@@ -40,5 +40,15 @@ public class PlantaService {
         plantaRepository.deleteByNomeCientifico(nomeCientifico);
     }
 
+    public PlantaModel alterarPlanta(PlantaModel plantaModel, String id) {
+        plantaModel.setId(id);
+        return plantaRepository.save(plantaModel);
+    }
+
+    public PlantaModel alterarPlantaPorNomeCientifico(PlantaModel plantaModel, String nomeCientifico) {
+        plantaModel.setNomeCientifico(nomeCientifico);
+        return plantaRepository.save(plantaModel);
+    }
+
 
 }
