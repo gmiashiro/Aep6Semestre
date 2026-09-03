@@ -3,6 +3,7 @@ package br.com.sextoSementre.aep.model;
 import br.com.sextoSementre.aep.enums.EstadoConservacao;
 import br.com.sextoSementre.aep.enums.Luminosidade;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ public class PlantaModel {
     @Id
     private String id;
 
+    @Indexed(unique = true)
     private String nomeCientifico;
     private List<String> nomesPopulares;
 
