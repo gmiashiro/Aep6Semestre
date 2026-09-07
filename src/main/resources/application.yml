@@ -1,7 +1,7 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27017/plantas
+      uri: mongodb://${MONGO_ROOT_USERNAME:root}:${MONGO_ROOT_PASSWORD:Mongo}@localhost:${MONGO_PORT:27018}/plantas?authSource=admin
 
 springdoc:
   swagger-ui:
