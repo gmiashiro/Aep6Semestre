@@ -1,7 +1,8 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://${MONGO_ROOT_USERNAME:root}:${MONGO_ROOT_PASSWORD:Mongo}@localhost:${MONGO_PORT:27018}/plantas?authSource=admin
+      uri: mongodb://localhost:27017/plantas
+      auto-index-creation: true
 
 springdoc:
   swagger-ui:
