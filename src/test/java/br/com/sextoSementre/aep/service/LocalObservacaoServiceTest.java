@@ -58,7 +58,7 @@ public class LocalObservacaoServiceTest {
                 .thenReturn(localSalvo);
 
         LocalObservacaoResponse resultado = localObservacaoService.criar(localObservacaoRequest);
-        
+
         assertEquals("1", resultado.id());
         assertEquals("Avenida do centro", resultado.nome());
         assertEquals("Avenida do centro", resultado.endereco().logradouro());
