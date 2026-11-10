@@ -2,7 +2,6 @@ package br.com.sextoSementre.aep.controller;
 
 import br.com.sextoSementre.aep.dto.LocalObservacaoRequest;
 import br.com.sextoSementre.aep.dto.LocalObservacaoResponse;
-import br.com.sextoSementre.aep.model.LocalObservacao;
 import br.com.sextoSementre.aep.service.LocalObservacaoService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -163,16 +162,6 @@ public class LocalObservacaoControllerTest {
 
     @Test
     void deveDeletarLocalObservacaoPorId() {
-        LocalObservacao localSalvo = new LocalObservacao(
-                "1",
-                "Avenida do centro",
-                new LocalObservacao.Endereco(
-                        "Avenida do centro",
-                        "testecity",
-                        "TE"
-                )
-        );
-
         localObservacaoController.excluir("1");
 
 
