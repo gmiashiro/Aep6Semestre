@@ -54,8 +54,7 @@ public class LocalObservacaoServiceTest {
                 )
         );
 
-        when(localObservacaoRepository.insert(any(LocalObservacao.class)))
-                .thenReturn(localSalvo);
+        when(localObservacaoRepository.insert(any(LocalObservacao.class))).thenReturn(localSalvo);
 
         LocalObservacaoResponse resultado = localObservacaoService.criar(localObservacaoRequest);
 

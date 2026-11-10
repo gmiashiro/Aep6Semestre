@@ -3,20 +3,17 @@ package br.com.sextoSementre.aep.controller;
 import br.com.sextoSementre.aep.dto.LocalObservacaoRequest;
 import br.com.sextoSementre.aep.dto.LocalObservacaoResponse;
 import br.com.sextoSementre.aep.model.LocalObservacao;
-import br.com.sextoSementre.aep.model.PlantaModel;
 import br.com.sextoSementre.aep.service.LocalObservacaoService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.http.ResponseEntity;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.util.List;
-import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -63,8 +60,9 @@ public class LocalObservacaoControllerTest {
         MockHttpServletRequest request = new MockHttpServletRequest("POST", "/locais-observacao");
         RequestContextHolder.setRequestAttributes(new ServletRequestAttributes(request));
 
-        LocalObservacaoResponse resultado = localObservacaoService.criar(localObservacaoRequest);
+        LocalObservacaoResponse resultado = localObservacaoController.criar(localObservacaoRequest).getBody();
 
+        assertNotNull(resultado);
         assertEquals("1", resultado.id());
         assertEquals("Avenida do centro", resultado.nome());
         assertEquals("Avenida do centro", resultado.endereco().logradouro());
@@ -72,7 +70,8 @@ public class LocalObservacaoControllerTest {
         assertEquals("TE", resultado.endereco().uf());
     }
 
-    
+
+
     @Test
     void deveListarTodosOsLocaisObservacao() {
         LocalObservacaoResponse localSalvo = new LocalObservacaoResponse(
