@@ -12,6 +12,56 @@ As principais tecnologias utilizadas no desenvolvimento dessa PoC são:
 - **Banco de dados:** MongoDb.
 - **Testes:** JUnit e Mockito. 
 
+## Estrutura do banco de dados:
+- **Coleção: plantas**
+```
+  {
+    "id": "string",   \\ Gerado automaticamente pelo MongoDB
+    "nomeCientifico": "string",
+    "nomesPopulares": [
+      "string"
+    ],
+    "estadoConservacao": "SEGURA",
+    "venenosa": true,
+    "seguraConsumoHumano": true,
+    "alturaAproximada": 0.1,
+    "porte": "string",
+    "longevidade": 0,
+    "tipoSolo": "string",
+    "luminosidade": "SOMBRA",
+    "periodoFloracao": "string",
+    "corDasFlores": [
+        "string"
+    ]
+  }
+```
+<br>
+
+- **Coleção: locais-observacao**
+```
+  {
+    "id": "string",   \\ Gerado automaticamente pelo MongoDB
+    "nome": "string",
+    "endereco": {
+      "logradouro": "string",
+      "cidade": "string",
+      "uf": "EX"
+    }
+  }
+```
+<br>
+
+- **Coleção: observacoes**
+```
+  {
+    "id": "string",    \\ Gerado automaticamente pelo MongoDB
+    "plantaId": "string",
+    "localId": "string",
+    "data": "2026-11-10",
+    "descricao": "string"
+  }
+```
+
 ## Como executar:
 - **O sistema:**
   - Faça o download desse repositório;
